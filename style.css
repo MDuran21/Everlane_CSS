@@ -7,6 +7,8 @@
 :root {
   --header-height: 40px;
   --background-color: #ecf0f1;
+  --text-color-black: #000000;
+  --text-color-white: #ffffff;
   --title-size: 20px;
   --font-weight: 370;
   --nav-font-size: 13px;
@@ -23,7 +25,30 @@ body {
   font-weight: 300;
 }
 
+.arrow-on {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .arrow-on {
+    display: inline;
+  }
+}
+
+/* He decidido dejarlo así como en la página original, aunque se que hay un hover que hace que si estas en dicha sección se activa la flecha pero baja mi conocimiento veo que hacian falta muchos ids y cosas, si es más fácil de lo que pensaba me encantaría que me lo dijeras */
+
+.black-text {
+  color: var(--text-color-black);
+  font-weight: var(--font-weight);
+}
+
+.white-text {
+  color: var(--text-color-white);
+  font-weight: var(--font-weight);
+}
+
 header {
+  z-index: 1000;
   background-color: var(--background-color);
   position: fixed;
   top: 0;
@@ -194,15 +219,40 @@ header {
   margin-top: 0.8rem;
 }
 
-#luxury div img {
+#luxury {
+  cursor: pointer;
+}
+
+.image-box {
+  position: relative;
+  width: 100%;
+}
+
+.image-box img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+}
+
+.image-box .overlay {
+  position: absolute;
+  line-height: 1.4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-box .overlay-left {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
 }
 
 #girls {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  cursor: pointer;
 }
 
 #girls div img {
@@ -215,6 +265,7 @@ header {
   width: 100%;
   height: auto;
   display: block;
+  cursor: pointer;
 }
 
 footer {
