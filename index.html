@@ -40,7 +40,13 @@
     <div id="spacer"></div>
 
     <section id="offers">
-      <img src="/imgs/principal_girl.png" alt="offers" width="100%" />
+      <picture>
+        <source
+          srcset="/imgs/principal_girl_small.png"
+          media="(max-width: 784px)"
+        />
+        <img src="/imgs/principal_girl.png" alt="girl in blue dress" />
+      </picture>
     </section>
 
     <div id="wardrobe_intro">
@@ -76,7 +82,16 @@
 
     <section id="luxury">
       <div class="image-box">
-        <img src="/imgs/stranger_things_vibe.png" alt="luxury" />
+        <picture>
+          <source
+            srcset="/imgs/stranger_things_vibe_small.png"
+            media="(max-width: 784px)"
+          />
+          <img
+            src="/imgs/stranger_things_vibe.png"
+            alt="girls on a hill well dressed"
+          />
+        </picture>
         <div class="overlay">
           <h2 class="black-text">CLEAN LUXURY. BETTER FOR YOU.</h2>
           <p class="complements" class="black-text">
@@ -118,7 +133,12 @@
     </section>
 
     <section id="white-T">
-      <div><img src="/imgs/white_t.png" alt="white T-shirt" /></div>
+      <div>
+        <picture>
+          <source srcset="/imgs/white_t_small.png" media="(max-width: 784px)" />
+          <img src="/imgs/white_t.png" alt="white-T" />
+        </picture>
+      </div>
     </section>
 
     <footer>

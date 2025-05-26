@@ -168,6 +168,17 @@ header {
   text-decoration: underline;
 }
 
+#offers picture,
+#offers picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#wardrobe_intro {
+  cursor: pointer;
+}
+
 #wardrobe_intro h2 {
   font-size: var(--nav-font-size);
   font-weight: var(--font-weight);
@@ -196,6 +207,7 @@ header {
 }
 
 #full_wardrobe {
+  cursor: pointer;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas: 'w1 w2 w3 w4 w5 w6';
@@ -260,6 +272,13 @@ header {
   cursor: pointer;
 }
 
+#luxury picture,
+#luxury picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .image-box {
   position: relative;
   width: 100%;
@@ -318,11 +337,15 @@ header {
   display: block;
 }
 
-#white-T div img {
+#white-T {
+  cursor: pointer;
+}
+
+#white-T picture,
+#white-T picture img {
   width: 100%;
   height: auto;
   display: block;
-  cursor: pointer;
 }
 
 footer {
