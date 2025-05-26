@@ -202,6 +202,43 @@ header {
   max-width: 100%;
 }
 
+@media (max-width: 784px) {
+  #full_wardrobe {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      'w1 w2 w3 w4 w5'
+      'w6 w6 w6 w6 w6';
+  }
+}
+
+@media (max-width: 749px) {
+  #full_wardrobe {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      'w1 w2 w3 w4'
+      'w5 w5 w6 w6';
+  }
+}
+
+@media (max-width: 599px) {
+  #full_wardrobe {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'w1 w2 w3'
+      'w4 w5 w6';
+  }
+}
+
+@media (max-width: 449px) {
+  #full_wardrobe {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'w1 w2'
+      'w3 w4'
+      'w5 w6';
+  }
+}
+
 .wardrobe {
   display: flex;
   flex-direction: column;
@@ -245,7 +282,7 @@ header {
 
 .image-box .overlay-left {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 1rem;
 }
 
@@ -253,6 +290,26 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   cursor: pointer;
+}
+
+@media (max-width: 784px) {
+  #girls {
+    grid-template-columns: 1fr;
+  }
+}
+
+#girls h2,
+#girls p {
+  font-size: var(--nav-font-size);
+  font-weight: var(--font-weight);
+}
+
+#girls h2 {
+  margin-bottom: 0.5rem;
+}
+
+#girls div {
+  font-size: var(--nav-font-size);
 }
 
 #girls div img {
