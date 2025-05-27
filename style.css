@@ -73,7 +73,7 @@ header {
   transform: translateX(
     -50%
   ); /* Lo de poner el logo centrado lo he tenido que buscar */
-  /* también he estado a punto de meter las letras del EVERLANE encapsuladas en divs para poder ajustar el espacio entre ellas pero he visto que dejando un espacio en el html se parecía bastante, ¿lo hubieras visto viable? */
+  /* también he estado a punto de meter las letras del EVERLANE encapsuladas en divs para poder ajustar el espacio entre ellas pero he visto que dejando un espacio en el html se parecía bastante, ¿lo hubieras visto viable? PD: he descubierto el letter-spacing, supongo que es lo más sencillo XD */
 }
 
 #logo {
@@ -173,6 +173,53 @@ header {
   width: 100%;
   height: auto;
   display: block;
+}
+#offers {
+  position: relative;
+}
+
+#offers-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas:
+    'offer1 offer2 offer3'
+    'shopping shopping shopping';
+  gap: 3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.big-text {
+  font-size: 3.5rem;
+  font-weight: 550;
+}
+
+.center-offer {
+  line-height: 1.1;
+}
+
+.offers-links {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+}
+
+#offers-extra {
+  grid-area: 'shopping';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 #wardrobe_intro {
